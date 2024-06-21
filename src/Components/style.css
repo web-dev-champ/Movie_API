@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --primary-color:#000000;
+    --secondary-color:#262626;
+}
+body{
+    background-color: var(--primary-color);
+}
+.header{
+    width: Fixed (1,921px)px;
+    height: Hug (135px)px;
+    left: -1px;
+    padding: 30px 162px 30px 162px;
+    gap: 0px;
+    display:flex;
+    justify-content: space-between;
+    opacity: 0px;
+    background-color: transparent;
+
+}
+nav ul{
+    display:flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+nav ul li{
+    list-style: none;
+    margin-right:1rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.2rem 0.6rem;
+    position: relative;
+}
+nav ul li a::before{
+    content: "";
+    position: absolute;
+    top:-10px;
+    left:50%;
+    height: 3px;
+    width:0;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover{
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+.inputText{
+    border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 30px;
+	color: #fff;
+	width: 250px;
+	text-transform: capitalize;
+	font-size: 16px;
+	font-weight: 500;
+	transition: 0.5s;
+}
+.inputText::placeholder{
+    color: #c2c2c2;
+}
+.inputText:focus{
+    width: 400px;
+	border-color: #ffffff;
+}
+.search-btn button{
+    background-color: transparent;
+    box-shadow: inset 0 5px 10px var(--primary-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0 2rem 2rem 0;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid var(--primary-color);
+}
+.search-btn button:hover
+{
+    background-color: #393838;
+    cursor: pointer;
+}
+.container{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.overview{
+    color: #fff;
+	font-size: 13px;
+	font-weight: 700;
+	
+}
+.card {
+	position: relative;
+	min-width: 200px;
+	width: 200px;
+	height: 250px;
+	border-radius: 6px;
+	overflow: hidden;
+	margin-right: 10px;
+	transition: 0.5s;
+    margin: 10px auto;
+    padding: 3px;
+    background-color: var(--secondary-color);
+}
+
+.card-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card:hover {
+	transform: scale(1.1);
+    cursor: pointer;
+}
+
+.card:hover .card-body {
+	opacity: 1;
+}
+
+.card-body {
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+	padding: 10px;
+	transition: 0.5s;
+}
+
+.name {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: capitalize;
+	margin-top: 30%;
+}
+
+.des {
+	color: #fff;
+	opacity: 0.8;
+	margin: 5px 0;
+	font-weight: 500;
+	font-size: 12px;
+}
+
+.rating{
+    color: #fff;
+    font-size: 15px;
+	font-weight: 700;
+}
+.genre{
+    color:#ffffff;
+    width: Fixed (1,921px)px;
+    height: Hug (135px)px;
+    left: -1px;
+    padding: 30px 162px 30px 162px;
+    gap: 0px;
+    opacity: 0px;    
+}
+.genre ul{
+    display: flex;
+    margin: 3px auto;
+    justify-content: space-between;
+}
+.genre ul li{
+    padding: 1% auto;
+}
+
+#logo{
+    width: 150px;
+    height: 54.75px;
+    gap: 0px;
+    opacity: 0px;
+}
+.carousel-container{
+    background-image:  url("frontimg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    width: Fixed (1,921px)px;
+    height: 600px;
+    left: -1px;
+    margin: 30px 162px 30px 162px;
+    gap: 0px;
+    
+}
+.carousel{
+    margin: 30px 162px 30px 162px;
+    color: #fff;
+    background-color:#262626c5;
+    padding-left: 5px;
+    position: relative; /* Position relative to the normal document flow */
+    top: 60%; /* Adjust this value to move the carousel lower, using percentage */
+    transform: translateY(20%);
+}
+
+@media (max-width:900px){
+    .header{
+        background-color: transparent;
+        height: 180px;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li{
+        padding-top: 10px;
+    }
+    .search-btn{
+        width: 200px;
+        margin-right: 100px;
+    }
+}
+.notfound{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.movie-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 20px;
+  }
+  
+  .movie-detail-container img {
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .movie-detail-info {
+    text-align: center;
+  }
+  
+  .movie-detail-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .movie-detail-info p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .movie-detail-info h2 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-detail-info ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .movie-detail-info ul li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
